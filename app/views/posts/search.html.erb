@@ -1,6 +1,6 @@
 <h2 class="text-muted">
   <% if @posts.any? %>
-    <%= @posts.count %> resultados encontrados.
+    <%= pluralize(@posts.count, 'encontrado') %>
   <% else %>
     Nenhum resultado encontrado
   <% end %>
