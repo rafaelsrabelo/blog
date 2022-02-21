@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 
+gem 'pg_search'
+gem 'friendly_id'
 gem 'rails-i18n'
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
