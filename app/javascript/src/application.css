@@ -1,1 +1,97 @@
 @import "bootstrap"; 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.logo-twitter {
+  margin-left: auto;
+}
+
+.title-home {
+  font-weight: 900;
+  font-size: 52px;
+  color: #fff;
+}
+
+.content-topo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background: #291832;
+}
+
+.title-blog {
+  color: #fff;
+  font-weight: 700;
+}
+.subtitle-blog {
+  color: #fff;
+}
+.line {
+  border-right: 2px solid rgba(255,255,255, .75);
+  color: rgba(255,255,255, .75);
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-name {
+  color: #291832;
+}
+.btn-register {
+  background: #FFF;
+  padding: 10px 8px;
+  font-weight: 700; 
+}
+
+.bg {
+  background: #291832;
+  color: #fff;
+}
+
+.card-post  {
+  border-radius: 10px;
+  background: #291832;
+  color: #fff;
+}
+.link-card {
+  color: #fff;
+  text-decoration: none;
+}
+.link-card:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.title-post{
+  font-weight: 900;
+}
+.type-animation {
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 4s steps(40) 1s normal both;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18px;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgba(255,255,255, .75);
+  }
+  to {
+    border-right-color:transparent;
+  }
+}

@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
+  
     <title>Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <%= stylesheet_pack_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
   </head>
 
-  <body> 
-    <div class="bg-primary text-white text-center mb-4 p-4">
-      <%= link_to root_path, class:"text-white" do %>
-        <h1 class="display-4">Blog da programação</h1>
-      <% end %>
-      <p class="lead">
-        Um site de artigos onde programadores profissionais e entusiastas podem debater questões desse mundo incrível. 
-      </p>
+  <body class="">
+    <div class="">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="<%= root_path %>">
+            <img src="logo.svg" alt="" width="60" height="48">
+          </a>
+          <div class="d-flex justify-content-center align-items-center ms-auto">
+            <%= form_with url: search_posts_path, method: :get, local: true, class:"d-flex ms-auto d-none d-sm-block" do |form| %>
+              <%= form.search_field :q, class:"form-control me-2", required: true, type: "search", placeholder: 'Buscar post...', value: params[:q] %>
+            <% end %>
+            <div class="social-network">
+              <a href="https://twitter.com/rafaelrabelodev" target="_blank" class="m-3">
+                <img src="/Vector.png" class=""alt="">
+              </a>
+              <a href="https://www.linkedin.com/in/rafaelsrabelo/" target="_blank" class="">
+                <img src="/linkroxo.png" class=""alt="">
+              </a>
+            </div>
+          
+          </div>
+        </div>
+      </nav>
     </div>
+    
+    <%# <p class="line d-flex type-animation">
+      Blog feito em Rails | Portfólio =)
+    </p> %>
     
     <div class="container">
       <% flash.each do |type, message| %>
@@ -28,21 +53,19 @@
         </div>
       <% end %>
 
-      <div class="row">
-        <%= form_with url: search_posts_path, method: :get, local: true, class:"" do |form| %>
-          <div class="col-4 offset-8">
-                <div class="form-group mx-3 mb-3">
-                  <%= form.search_field :q, class:"form-control", required: true, placeholder: 'Buscar...', value: params[:q] %>
-                </div>
-        <% end %>
-        </div>
-      </div>
-
-      <%= yield %>
     </div>
+    <%= yield %>
     
-    <footer class="bg-primary text-white text-center mt-5 p-4">
-      Copyright © @rafaelsrabelo <%= Date.current.year %>
+    <footer class="bg d-block text-center pt-4 pb-4">
+      <div class="icons-footer mb-4">
+        <a href="https://twitter.com/rafaelrabelodev" target="_blank">
+          <img src="/twitter-white.svg" class="m-4" alt="">
+        </a>
+        <a href="https://www.linkedin.com/in/rafaelsrabelo/" target="_blank">
+          <img src="/linkedin-white.svg" alt="">
+        </a>
+      </div>
+      <p>Copyright © @rafaelsrabelo <%= Date.current.year %></p>
     </footer>
   </body>
 </html>

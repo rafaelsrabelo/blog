@@ -1,7 +1,23 @@
-<% @posts.each do |post| %>
-  <%= render post %> 
-<% end %>
+<div class="content-topo d-block text-center">
+  <div class="p-5 m-2">
+    <h1 class="title-blog">Blog feito em rails! 💻</h1>
+    <p class="subtitle-blog btn-lg lead">Apaixonado por tecnologia e criando um blog para fala sobre meu desenvolvimeno e sobre conteúdos que achei
+    interessante nesse processo. 🚀</p>
+    <a href="#" class="btn btn-register mt-2">Inscreva-se</a>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="content-post">
 
-<div class="text-end mt-5">
-  <%= link_to 'Criar novo post', new_post_path, class:"btn btn-outline-primary" %>
+      </div>
+    </div>
+  </div>
+  <% @posts.each do |post| %>
+    <%= render post %> 
+  <% end %>
+  <%# <div class="text-end mt-5"> %>
+    <%# <%= link_to 'Criar novo post', new_post_path, class:"btn btn-outline-primary" %>
+  <%# </div> %>
 </div>
