@@ -33,6 +33,7 @@ body {
   font-weight: 700;
 }
 .subtitle-blog {
+  font-size: 1.25rem;
   color: #fff;
 }
 .line {
@@ -56,6 +57,9 @@ body {
 .background-image {
   background: #EBC5FF;
   border-radius: 10px;
+}
+.background-image2 {
+  background: #EBC5FF;
 }
 
 .bg {
@@ -115,6 +119,7 @@ body {
 }
 
 .logo {
+  color: #291832;
   font-weight: 900;
 }
 
