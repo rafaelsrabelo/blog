@@ -1,32 +1,32 @@
-<div class="m-4">
-  <div class="row">
-    <div class="col m-2">
-      <div class="card-post p-4">
-          <%= link_to post, class:"link-card" do %>
-            <div class="topo-card  d-flex">
-              <p class="title-post">
-                <%= post.title %>
-              </p>
-              <p class="text-white ms-auto">
-                <%= pluralize(post.comments.count, 'Comentário') %>
-              </p>
-            </div>
-            <hr>
-            <h3 class="">
-              <%= post.description.truncate(50) %>
-            </h3>
-
-            <br>
-
-            </p>
-              Por: <%= post.author %> | <%= l(post.created_at, format: :short ) %> 
-            <br>
-          <% end %>
-
-          <%#= link_to "Ler artigo", post, class:"btn btn-primary" %>
-          <%# <%= link_to "Editar artigo", edit_post_path(post), class:"btn btn-secondary" %> 
-          <%#= link_to "Apagar artigo", post, method: :delete, class:"btn btn-danger", data: { confirm: 'Você tem certeza?' } %>
+<div class="col-md-6 col-sm-12 my-4">
+  <div class="card-post p-4">
+      <%= link_to post, class:"link-card" do %>
+        <div class="background-image mb-3 text-center">
+          <%= image_tag post.avatar, class: "img-fluid p-2" %>
         </div>
+        <div class="topo-card  d-flex">
+
+          <p class="title-post">
+            <%= post.title %>
+          </p>
+          <p class="text-white ms-auto">
+            <%= pluralize(post.comments.count, 'Comentário') %>
+          </p>
+        </div>
+        <hr>
+        <h3 class="">
+          <%= post.description.truncate(30) %>
+        </h3>
+
+        <br>
+
+        </p>
+          Por: <%= post.author %> | <%= l(post.created_at, format: :short ) %> 
+        <br>
+      <% end %>
+
+      <%#= link_to "Ler artigo", post, class:"btn btn-primary" %>
+      <%# <%= link_to "Editar artigo", edit_post_path(post), class:"btn btn-secondary" %> 
+      <%#= link_to "Apagar artigo", post, method: :delete, class:"btn btn-danger", data: { confirm: 'Você tem certeza?' } %>
     </div>
-  </div>
 </div>

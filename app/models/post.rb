@@ -3,8 +3,8 @@ class Post < ApplicationRecord
   extend FriendlyId
   
   validates :title, :author, :description, presence: true
-  
   has_many :comments, dependent: :destroy
+  has_one_attached :avatar  
   
   friendly_id :title, use: :slugged
   

@@ -18,10 +18,10 @@
 
   <body class="">
     <div class="">
-      <nav class="navbar navbar-light bg-light">
+      <nav class="navbar navbar-light bg-light py-3">
         <div class="container">
-          <a class="navbar-brand" href="<%= root_path %>">
-            <img src="logo.svg" alt="" width="60" height="48">
+          <a class="navbar-brand logo" href="<%= root_path %>">
+          @rafaelrabelodev
           </a>
           <div class="d-flex justify-content-center align-items-center ms-auto">
             <%= form_with url: search_posts_path, method: :get, local: true, class:"d-flex ms-auto d-none d-sm-block" do |form| %>
@@ -45,6 +45,7 @@
       Blog feito em Rails | Portfólio =)
     </p> %>
     
+    <!-- 
     <div class="container">
       <% flash.each do |type, message| %>
         <div class="alert alert-<%= type == 'alert' ? 'danger' : 'success' %> alert-dismissible fade show" role="alert">
@@ -54,6 +55,8 @@
       <% end %>
 
     </div>
+    -->
+
     <%= yield %>
     
     <footer class="bg d-block text-center pt-4 pb-4">
@@ -65,6 +68,7 @@
           <img src="/linkedin-white.svg" alt="">
         </a>
       </div>
+      <hr>
       <p>Copyright © @rafaelsrabelo <%= Date.current.year %></p>
     </footer>
   </body>

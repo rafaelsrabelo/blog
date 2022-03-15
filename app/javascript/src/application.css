@@ -53,6 +53,11 @@ body {
   font-weight: 700; 
 }
 
+.background-image {
+  background: #EBC5FF;
+  border-radius: 10px;
+}
+
 .bg {
   background: #291832;
   color: #fff;
@@ -76,6 +81,41 @@ body {
 }
 .type-animation {
   animation: blinkCursor 500ms steps(40) infinite normal, typing 4s steps(40) 1s normal both;
+}
+
+.title-show {
+  margin-top: 70px;
+  font-size: 2.625rem;
+  font-weight: 700;
+}
+
+.author {
+  font-size: 1rem;
+  color: #291832;
+  font-weight: 700;
+}
+
+.description-show {
+  letter-spacing: .3px;
+  line-height: 1.6;
+  font-size: 1.25rem;
+  margin-bottom: 70px;
+}
+
+.rounded-circle {
+  background: #c3c3c3;
+}
+
+.btn-submit {
+  background: #291832;
+  color: #fff;
+}
+.btn:hover {
+  color: #fff;
+}
+
+.logo {
+  font-weight: 900;
 }
 
 @keyframes typing {
