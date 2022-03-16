@@ -89,21 +89,24 @@ body {
 
 .title-show {
   margin-top: 70px;
-  font-size: 2.625rem;
-  font-weight: 700;
+  color: #291832;
+  font-size: 3rem;
+  font-weight: 900;
 }
 
 .author {
   font-size: 1rem;
   color: #291832;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .description-show {
+  color: #291832;
   letter-spacing: .3px;
   line-height: 1.6;
   font-size: 1.25rem;
   margin-bottom: 70px;
+  font-weight: 700;
 }
 
 .rounded-circle {
@@ -115,7 +118,7 @@ body {
   color: #fff;
 }
 .btn:hover {
-  color: #fff;
+  color: #000;
 }
 
 .logo {
